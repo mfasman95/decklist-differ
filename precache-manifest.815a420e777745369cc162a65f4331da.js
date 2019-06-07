@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f6b76d30874f367085092a1efcc7da21",
+    "revision": "2d876382ae264e066b76ec77d30785f4",
     "url": "/decklist-differ/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/decklist-differ/static/css/2.266e55a5.chunk.css"
   },
   {
-    "revision": "ab22aba5e85fa3c8a0ca",
+    "revision": "6614e67e3fe3bcc5920c",
     "url": "/decklist-differ/static/css/main.5c811520.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/decklist-differ/static/js/2.f3fa699a.chunk.js"
   },
   {
-    "revision": "ab22aba5e85fa3c8a0ca",
-    "url": "/decklist-differ/static/js/main.56869874.chunk.js"
+    "revision": "6614e67e3fe3bcc5920c",
+    "url": "/decklist-differ/static/js/main.a03ebdb7.chunk.js"
   },
   {
     "revision": "e8084e3fd28078ecedd2",
