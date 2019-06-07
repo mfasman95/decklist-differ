@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/decklist-differ/static/css/main.5c811520.chunk.css",
-    "main.js": "/decklist-differ/static/js/main.d178d61e.chunk.js",
-    "main.js.map": "/decklist-differ/static/js/main.d178d61e.chunk.js.map",
+    "main.js": "/decklist-differ/static/js/main.807c917a.chunk.js",
+    "main.js.map": "/decklist-differ/static/js/main.807c917a.chunk.js.map",
     "runtime~main.js": "/decklist-differ/static/js/runtime~main.21d5f581.js",
     "runtime~main.js.map": "/decklist-differ/static/js/runtime~main.21d5f581.js.map",
     "static/css/2.266e55a5.chunk.css": "/decklist-differ/static/css/2.266e55a5.chunk.css",
     "static/js/2.c22545b6.chunk.js": "/decklist-differ/static/js/2.c22545b6.chunk.js",
     "static/js/2.c22545b6.chunk.js.map": "/decklist-differ/static/js/2.c22545b6.chunk.js.map",
     "index.html": "/decklist-differ/index.html",
-    "precache-manifest.9f5ceeab9260b34691854f0e42100334.js": "/decklist-differ/precache-manifest.9f5ceeab9260b34691854f0e42100334.js",
+    "precache-manifest.a5389bc02cc470600e573fa9a00df34a.js": "/decklist-differ/precache-manifest.a5389bc02cc470600e573fa9a00df34a.js",
     "service-worker.js": "/decklist-differ/service-worker.js",
     "static/css/2.266e55a5.chunk.css.map": "/decklist-differ/static/css/2.266e55a5.chunk.css.map",
     "static/css/main.5c811520.chunk.css.map": "/decklist-differ/static/css/main.5c811520.chunk.css.map"
