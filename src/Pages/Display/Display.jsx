@@ -4,8 +4,9 @@ import {
   Row,
   Col,
   Button,
-  Table,
 } from 'reactstrap';
+import { ComparisonTable } from '../../Components';
+import _ from 'lodash';
 
 const getAngry = string => console.error('OH NO!!', string);
 
@@ -37,103 +38,19 @@ etc...
   return decklistObject;
 };
 
-const compareDecklistObjects = (decklistAString, decklistBString, displayNoDifference) => {
-  const combinedDecklist = {};
+const compareDecklistStrings = (decklistAString, decklistBString) => {
   const decklistA = convertDecklistStringToObject(decklistAString);
   const decklistB = convertDecklistStringToObject(decklistBString);
 
-  const decklistAKeys = Object.keys(decklistA);
-  decklistAKeys.forEach((key) => {
-    const valueA = decklistA[key];
-    const valueB = decklistB[key];
-    if (valueB === undefined) {
-      combinedDecklist[key] = {
-        left: valueA,
-        right: 0,
-        difference: valueA,
-        same: false,
-        rowStyle: 'success',
-      };
-    }
-    const valueAGreater = valueA > valueB;
-    const valueBGreater = valueA < valueB;
-    const valuesEqual = valueA === valueB;
-    if (valueAGreater) {
-      combinedDecklist[key] = {
-        left: valueA,
-        right: valueB,
-        difference: valueA - valueB,
-        same: false,
-        rowStyle: 'success',
-      };
-    }
-    if (valueBGreater) {
-      combinedDecklist[key] = {
-        left: valueA,
-        right: valueB,
-        difference: valueB - valueA,
-        same: false,
-        rowStyle: 'danger',
-      };
-    }
-    if (valuesEqual && displayNoDifference) {
-      combinedDecklist[key] = {
-        left: valueA,
-        right: valueB,
-        difference: 0,
-        same: true,
-        rowStyle: 'default',
-      };
-    }
-  });
+  const allCardNames = _.union(Object.keys(decklistA), Object.keys(decklistB));
 
-  const decklistBKeys = Object.keys(decklistB);
-  decklistBKeys.forEach((key) => {
-    const valueB = decklistB[key];
-    if (!decklistAKeys.includes(key)) {
-      combinedDecklist[key] = {
-        left: 0,
-        right: valueB,
-        difference: valueB,
-        same: false,
-        rowStyle: 'danger',
-      };
-    }
-  });
-
-  const sortedDecklist = Object.entries(combinedDecklist).sort((a, b) => {
-    if (a[0] < b[0]) return -1;
-    if (a[0] > b[0]) return 1;
-    return 0;
-  });
-
-  return (
-    <Table responsive className="table-bordered table-hover">
-      <thead>
-        <tr>
-          <th scope="col">Name</th>
-          <th scope="col">Left</th>
-          <th scope="col">Right</th>
-          <th scope="col">Difference</th>
-        </tr>
-      </thead>
-      <tbody>
-        {sortedDecklist.map(([name, {
-          left,
-          right,
-          rowStyle,
-          difference,
-        }]) => (
-          <tr className={`table-${rowStyle}`} key={name}>
-            <th scope="row">{name}</th>
-            <td>{left}</td>
-            <td>{right}</td>
-            <td>{difference}</td>
-          </tr>
-        ))}
-      </tbody>
-    </Table>
-  );
+  return allCardNames.reduce((buildingObject, key) => ({
+    ...buildingObject,
+    [key]: {
+      left: decklistA[key] || 0,
+      right: decklistB[key] || 0,
+    },
+  }), {});
 };
 
 export default ({
@@ -159,13 +76,19 @@ export default ({
           {' '}
           <Button color="warning" onClick={() => setDisplayNoDifference(false)}>Hide No Difference</Button>
         </h4>
-        {compareDecklistObjects(decklists.left.main, decklists.right.main, displayNoDifference)}
+        <ComparisonTable
+          decklistComparison={compareDecklistStrings(decklists.left.main, decklists.right.main)}
+          displayNoDifference={displayNoDifference}
+        />
       </Col>
     </Row>
     <Row>
       <Col xs="12">
         <h4>Sideboards</h4>
-        {compareDecklistObjects(decklists.left.side, decklists.right.side, displayNoDifference)}
+        <ComparisonTable
+          decklistComparison={compareDecklistStrings(decklists.left.side, decklists.right.side)}
+          displayNoDifference={displayNoDifference}
+        />
       </Col>
     </Row>
   </Container>
