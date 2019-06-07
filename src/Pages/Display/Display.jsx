@@ -44,11 +44,11 @@ const compareDecklistStrings = (decklistAString, decklistBString) => {
 
   const allCardNames = _.union(Object.keys(decklistA), Object.keys(decklistB));
 
-  return allCardNames.reduce((buildingObject, key) => ({
+  return allCardNames.reduce((buildingObject, cardName) => ({
     ...buildingObject,
-    [key]: {
-      left: decklistA[key] || 0,
-      right: decklistB[key] || 0,
+    [cardName]: {
+      left: decklistA[cardName] || 0,
+      right: decklistB[cardName] || 0,
     },
   }), {});
 };
