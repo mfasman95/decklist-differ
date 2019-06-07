@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/myapp/static/css/main.5c811520.chunk.css",
-    "main.js": "/myapp/static/js/main.f56e089b.chunk.js",
-    "main.js.map": "/myapp/static/js/main.f56e089b.chunk.js.map",
-    "runtime~main.js": "/myapp/static/js/runtime~main.e4f53ea3.js",
-    "runtime~main.js.map": "/myapp/static/js/runtime~main.e4f53ea3.js.map",
-    "static/css/2.266e55a5.chunk.css": "/myapp/static/css/2.266e55a5.chunk.css",
-    "static/js/2.f3fa699a.chunk.js": "/myapp/static/js/2.f3fa699a.chunk.js",
-    "static/js/2.f3fa699a.chunk.js.map": "/myapp/static/js/2.f3fa699a.chunk.js.map",
-    "index.html": "/myapp/index.html",
-    "precache-manifest.01fda2c721b39d864331250aad3366dc.js": "/myapp/precache-manifest.01fda2c721b39d864331250aad3366dc.js",
-    "service-worker.js": "/myapp/service-worker.js",
-    "static/css/2.266e55a5.chunk.css.map": "/myapp/static/css/2.266e55a5.chunk.css.map",
-    "static/css/main.5c811520.chunk.css.map": "/myapp/static/css/main.5c811520.chunk.css.map"
+    "main.css": "/decklist-differ/static/css/main.5c811520.chunk.css",
+    "main.js": "/decklist-differ/static/js/main.56869874.chunk.js",
+    "main.js.map": "/decklist-differ/static/js/main.56869874.chunk.js.map",
+    "runtime~main.js": "/decklist-differ/static/js/runtime~main.21d5f581.js",
+    "runtime~main.js.map": "/decklist-differ/static/js/runtime~main.21d5f581.js.map",
+    "static/css/2.266e55a5.chunk.css": "/decklist-differ/static/css/2.266e55a5.chunk.css",
+    "static/js/2.f3fa699a.chunk.js": "/decklist-differ/static/js/2.f3fa699a.chunk.js",
+    "static/js/2.f3fa699a.chunk.js.map": "/decklist-differ/static/js/2.f3fa699a.chunk.js.map",
+    "index.html": "/decklist-differ/index.html",
+    "precache-manifest.890b1eb18393bbc3db9ad8cd2d5a4adc.js": "/decklist-differ/precache-manifest.890b1eb18393bbc3db9ad8cd2d5a4adc.js",
+    "service-worker.js": "/decklist-differ/service-worker.js",
+    "static/css/2.266e55a5.chunk.css.map": "/decklist-differ/static/css/2.266e55a5.chunk.css.map",
+    "static/css/main.5c811520.chunk.css.map": "/decklist-differ/static/css/main.5c811520.chunk.css.map"
   }
 }
